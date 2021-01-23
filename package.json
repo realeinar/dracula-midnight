@@ -1,6 +1,6 @@
 {
 	"name": "theme-dracula-clean",
-	"version": "2.23.1",
+	"version": "2.23.2",
 	"displayName": "Dracula Clean",
 	"homepage": "https://draculatheme.com/",
 	"description": "Dracula Clean Theme. A dark theme for many editors, shells, and more.",
@@ -27,10 +27,10 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/dracula/visual-studio-code.git"
+		"url": "https://github.com/echevarriandre/dracula-clean.git"
 	},
 	"bugs": {
-		"url": "https://github.com/dracula/visual-studio-code/issues"
+		"url": "https://github.com/echevarriandre/dracula-clean/issues"
 	},
 	"engines": {
 		"vscode": "^1.13.0"
@@ -55,11 +55,6 @@
 				"label": "Dracula",
 				"uiTheme": "vs-dark",
 				"path": "./theme/dracula.json"
-			},
-			{
-				"label": "Dracula Soft",
-				"uiTheme": "vs-dark",
-				"path": "./theme/dracula-soft.json"
 			}
 		]
 	},

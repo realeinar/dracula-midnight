@@ -30,30 +30,6 @@ const withAlphaType = new Type('!alpha', {
 
 const schema = Schema.create([withAlphaType]);
 
-/**
- * Soft variant transform.
- * @type {ThemeTransform}
- */
-const transformSoft = theme => {
-    /** @type {Theme} */
-    const soft = JSON.parse(JSON.stringify(theme));
-    const brightColors = [...soft.dracula.ansi, ...soft.dracula.brightOther];
-    for (const key of Object.keys(soft.colors)) {
-        if (brightColors.includes(soft.colors[key])) {
-            soft.colors[key] = tinycolor(soft.colors[key])
-                .desaturate(20)
-                .toHexString();
-        }
-    }
-    soft.tokenColors = soft.tokenColors.map((value) => {
-        if (brightColors.includes(value.settings.foreground)) {
-            value.settings.foreground = tinycolor(value.settings.foreground).desaturate(20).toHexString();
-        }
-        return value;
-    })
-    return soft;
-};
-
 module.exports = async () => {
     const yamlFile = await readFile(
         join(__dirname, '..', 'src', 'dracula.yml'),
@@ -71,7 +47,6 @@ module.exports = async () => {
     }
 
     return {
-        base,
-        soft: transformSoft(base),
+        base
     };
 };
