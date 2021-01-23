@@ -1,10 +1,10 @@
 {
-	"name": "theme-dracula",
-	"version": "2.22.3",
-	"displayName": "Dracula Official",
+	"name": "theme-dracula-clean",
+	"version": "2.23.0",
+	"displayName": "Dracula Clean",
 	"homepage": "https://draculatheme.com/",
-	"description": "Official Dracula Theme. A dark theme for many editors, shells, and more.",
-	"publisher": "dracula-theme",
+	"description": "Dracula Clean Theme. A dark theme for many editors, shells, and more.",
+	"publisher": "echevarriandre",
 	"license": "MIT",
 	"scripts": {
 		"build": "node ./scripts/build.js",
@@ -14,7 +14,7 @@
 		"vsce-publish": "vsce publish"
 	},
 	"maintainers": [
-		"Derek P Sifford <dereksifford@gmail.com>"
+		"Andre Echevarria"
 	],
 	"contributors": [
 		"Krzysztof Wisznarewski",
@@ -22,7 +22,8 @@
 		"Eric Jackson",
 		"Elliott Pogue",
 		"Ajit Singh",
-		"Teddy Bradford"
+		"Teddy Bradford",
+		"Andre Echevarria"
 	],
 	"repository": {
 		"type": "git",
