@@ -249,7 +249,7 @@ colors:
   gitDecoration.modifiedResourceForeground: *CYAN
   gitDecoration.deletedResourceForeground: *RED
   gitDecoration.untrackedResourceForeground: *GREEN
-  gitDecoration.ignoredResourceForeground: *COMMENT
+  gitDecoration.ignoredResourceForeground: !alpha [*PURPLE, 40]
   gitDecoration.conflictingResourceForeground: *ORANGE
 
   # Diff Editor Colors
