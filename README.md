@@ -2,11 +2,11 @@
 
 > Better Dracula version for [Visual Studio Code](http://code.visualstudio.com). No more contrast!
 
-![Screenshot](https://raw.githubusercontent.com/echevarriandre/dracula-clean-vscode/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/echevarriandre/dracula-clean/master/screenshot.png)
 
 
 ## Source code
-[Git Repo](https://github.com/echevarriandre/dracula-clean-vscode/)
+[Git Repo](https://github.com/echevarriandre/dracula-vscode/)
 
 ## License
 
