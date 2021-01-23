@@ -81,8 +81,8 @@ colors:
 
   # Base Colors
   focusBorder: *TRANSPARENT                                                     # Overall border color for focused elements. This color is only used if not overridden by a component
-  foreground: *COMMENT                                                               # Overall foreground color. This color is only used if not overridden by a component
-  widget.shadow: *SHADOW                                                # Shadow color of widgets such as Find/Replace inside the editor
+  foreground: *COMMENT                                                          # Overall foreground color. This color is only used if not overridden by a component
+  widget.shadow: *SHADOW                                                        # Shadow color of widgets such as Find/Replace inside the editor
   selection.background: *PURPLE                                                 # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
   errorForeground: *RED                                                         # Overall foreground color for error messages (this color is only used if not overridden by a component)
 
@@ -97,9 +97,9 @@ colors:
   dropdown.foreground: *FG                                                      # Dropdown foreground
 
   # Input Control
-  input.background: *BGLight                                                         # Input box background
+  input.background: *BGLight                                                    # Input box background
   input.foreground: *FG                                                         # Input box foreground
-  input.border: *TRANSPARENT                                                       # Input box border
+  input.border: *TRANSPARENT                                                    # Input box border
   input.placeholderForeground: *COMMENT                                         # Input box foreground color for placeholder text
   inputOption.activeBorder: *PURPLE                                             # Border color of activated options in input fields
   inputValidation.infoForeground:                                               # Input validation foreground color for information severity
@@ -114,9 +114,9 @@ colors:
 
   # Scroll Bar Control
   scrollbar.shadow: *TRANSPARENT                                                # Scroll Bar shadow to indicate that the view is scrolled
-  scrollbarSlider.activeBackground: !alpha [*PURPLE, 60]                                            # Slider background color when active
-  scrollbarSlider.background: !alpha [*PURPLE, 30]                                                  # Slider background color
-  scrollbarSlider.hoverBackground: !alpha [*PURPLE, 40]                                             # Slider background color when hovering
+  scrollbarSlider.activeBackground: !alpha [*PURPLE, 60]                        # Slider background color when active
+  scrollbarSlider.background: !alpha [*PURPLE, 30]                              # Slider background color
+  scrollbarSlider.hoverBackground: !alpha [*PURPLE, 40]                         # Slider background color when hovering
 
   # Badge
   badge.foreground: *FG                                                         # Badge foreground color
@@ -126,14 +126,14 @@ colors:
   progressBar.background: *PINK                                                 # Background color of the progress bar shown for long running operations
 
   # List & Trees
-  list.hoverForeground: *WHITE                                                        # List/Tree foreground when hovering over items using the mouse
-  list.hoverBackground: *TRANSPARENT                                          # List/Tree background when hovering over items using the mouse
-  list.activeSelectionBackground: *TRANSPARENT                                    # List/Tree background color for the selected item when the list/tree is active
-  list.activeSelectionForeground: *CYAN                                           # List/Tree foreground color for the selected item when the list/tree is active
-  list.inactiveSelectionBackground: *TRANSPARENT                              # List/Tree background color for the selected item when the list/tree is inactive
-  list.inactiveSelectionForeground: *CYAN                                            # List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not
-  list.focusForeground:                                                         # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
-  list.focusBackground: *TRANSPARENT                                          # List/Tree background color for the focused item when the list/tree is active
+  list.hoverForeground: *WHITE                                                  # List/Tree foreground when hovering over items using the mouse
+  list.hoverBackground: *TRANSPARENT                                            # List/Tree background when hovering over items using the mouse
+  list.activeSelectionBackground: *TRANSPARENT                                  # List/Tree background color for the selected item when the list/tree is active
+  list.activeSelectionForeground: *CYAN                                         # List/Tree foreground color for the selected item when the list/tree is active
+  list.inactiveSelectionBackground: *TRANSPARENT                                # List/Tree background color for the selected item when the list/tree is inactive
+  list.inactiveSelectionForeground: *CYAN                                       # List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not
+  list.focusForeground: *WHITE                                                  # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
+  list.focusBackground: *SELECTION                                              # List/Tree background color for the focused item when the list/tree is active
   list.highlightForeground: *CYAN                                               # List/Tree foreground color of the match highlights when searching inside the list/tree
 
   list.dropBackground: *SELECTION                                               # List/Tree drag and drop background when moving items around using the mouse
@@ -146,14 +146,14 @@ colors:
   activityBar.dropBackground:                                                   # Drag and drop feedback color for the Activity Bar items
   activityBar.foreground: *FG                                                   # Activity bar foreground color (for example used for the icons)
   activityBar.border:                                                           # Activity Bar border color with the Side Bar
-  activityBar.activeBorder: *PINK                                  # Activity Bar indicator color
+  activityBar.activeBorder: *PINK                                               # Activity Bar indicator color
   activityBar.activeBackground:                                                 # Activity Bar indicator background color
   activityBarBadge.background: *PINK                                            # Activity notification badge background color
   activityBarBadge.foreground: *FG                                              # Activity notification badge foreground color
 
   # Side Bar
   sideBar.background: *BG                                                       # Side Bar background color
-  sideBar.foreground: !alpha [*PURPLE, 90]                                                          # Side Bar foreground color. The Side Bar is the container for views like Explorer and Search
+  sideBar.foreground: !alpha [*PURPLE, 90]                                      # Side Bar foreground color. The Side Bar is the container for views like Explorer and Search
   sideBar.border:                                                               # Side Bar border color on the side separating the editor
   sideBarTitle.foreground: *FG                                                  # Side Bar title foreground color
   sideBarSectionHeader.background: *BG                                          # Side Bar section header background color
@@ -193,7 +193,7 @@ colors:
   editor.wordHighlightStrongBackground: !alpha [ *GREEN, 50 ]                   # Background color of a symbol during write-access, for example when writing to a variable
 
   editor.findMatchBackground: !alpha [ *PINK, 80 ]
-  editor.findMatchHighlightBackground: !alpha [ *PURPLE, 40 ]                    # Color of the other search matches
+  editor.findMatchHighlightBackground: !alpha [ *PURPLE, 40 ]                   # Color of the other search matches
   editor.findRangeHighlightBackground: *LineHighlight                           # Color the range limiting the search
 
   editor.hoverHighlightBackground: !alpha [*CYAN, 50]                           # Highlight below the word for which a hover is shown
@@ -222,7 +222,7 @@ colors:
   editorBracketMatch.background:                                                # Background color behind matching brackets
   editorBracketMatch.border:                                                    # Color for matching brackets boxes
 
-  editorOverviewRuler.border: *TRANSPARENT                                                  # Color of the overview ruler border
+  editorOverviewRuler.border: *TRANSPARENT                                      # Color of the overview ruler border
   editorOverviewRuler.findMatchForeground:
   editorOverviewRuler.rangeHighlightForeground:
   editorOverviewRuler.selectionHighlightForeground: *ORANGE
@@ -259,7 +259,7 @@ colors:
   diffEditor.removedTextBorder:                                                 # Outline color for removed text
 
   # Editor Widget Colors
-  editorWidget.background: *BG                                              # Background color of editor widgets, such as Find/Replace
+  editorWidget.background: *BG                                                  # Background color of editor widgets, such as Find/Replace
   editorWidgetBorder:                                                           # Border color of the editor widget unless the widget does not contain a border or defines its own border color
 
   editorSuggestWidget.background: *BGDark                                       # Background color of the suggestion widget
@@ -279,8 +279,8 @@ colors:
   editorMarkerNavigationWarning.background:                                     # Editor marker navigation widget warning color
 
   # Peek View Colors
-  peekView.border: *TRANSPARENT                                                   # Color of the peek view borders and arrow
-  peekViewEditor.background: *BGDark                                                # Background color of the peek view editor
+  peekView.border: *TRANSPARENT                                                 # Color of the peek view borders and arrow
+  peekViewEditor.background: *BGDark                                            # Background color of the peek view editor
   peekViewEditorGutter.background:                                              # Background color of the gutter in the peek view editor
   peekViewEditor.matchHighlightBackground: !alpha [ *YELLOW, 80 ]               # Match highlight color in the peek view editor
   peekViewResult.background: *BGDark                                            # Background color of the peek view result list
@@ -289,7 +289,7 @@ colors:
   peekViewResult.matchHighlightBackground: !alpha [ *YELLOW, 80 ]               # Match highlight color in the peek view result list
   peekViewResult.selectionBackground: *SELECTION                                # Background color of the selected entry in the peek view result list
   peekViewResult.selectionForeground: *FG                                       # Foreground color of the selected entry in the peek view result list
-  peekViewTitle.background: *BGDark                                           # Background color of the peek view title area
+  peekViewTitle.background: *BGDark                                             # Background color of the peek view title area
   peekViewTitleDescription.foreground: *COMMENT                                 # Color of the peek view title info
   peekViewTitleLabel.foreground: *FG                                            # Color of the peek view title
 
@@ -304,7 +304,7 @@ colors:
 
   # Panel Colors
   panel.background: *BG                                                         # Panel background color
-  panel.border: *TRANSPARENT                                                                # Panel border color on the top separating to the editor
+  panel.border: *TRANSPARENT                                                    # Panel border color on the top separating to the editor
   panelTitle.activeBorder:                                                      # Border color for the active panel title
   panelTitle.activeForeground: *FG                                              # Title color for the active panel
   panelTitle.inactiveForeground: *COMMENT                                       # Title color for the inactive panel
@@ -327,7 +327,7 @@ colors:
   # Title Bar Colors (MacOS Only)
   titleBar.activeBackground: *BG                                                # Title Bar background when the window is active
   titleBar.activeForeground: *FG                                                # Title Bar foreground when the window is active
-  titleBar.inactiveBackground: *BG                                        # Title Bar background when the window is inactive
+  titleBar.inactiveBackground: *BG                                              # Title Bar background when the window is inactive
   titleBar.inactiveForeground: *COMMENT                                         # Title Bar foreground when the window is inactive
 
   # Notification Dialog Colors
@@ -388,8 +388,8 @@ colors:
   # Misc
   menu.separatorBackground:                                                     # Color of a separator menu item in menus
 
-  listFilterWidget.background: *BGLight                                              # Background color of the type filter widget in lists and trees.
-  listFilterWidget.outline: *BGLighter                                           # Outline color of the type filter widget in lists and trees.
+  listFilterWidget.background: *BGLight                                         # Background color of the type filter widget in lists and trees.
+  listFilterWidget.outline: *BGLighter                                          # Outline color of the type filter widget in lists and trees.
   listFilterWidget.noMatchesOutline: *RED                                       # Outline color of the type filter widget in lists and trees, when there are no matches.
 
 # Syntaxes
