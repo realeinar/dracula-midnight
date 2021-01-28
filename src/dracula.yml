@@ -162,7 +162,7 @@ colors:
 
   # Editor Group & Tabs
   editorGroup.background:                                                       # Background color of an editor group. The background color shows up when dragging editor groups around
-  editorGroup.border: *PURPLE                                                   # Color to separate multiple editor groups from each other
+  editorGroup.border: *TRANSPARENT                                                   # Color to separate multiple editor groups from each other
   editorGroup.dropBackground:                                                   # Background color when dragging editors around
   editorGroupHeader.noTabsBackground:                                           # Background color of the editor group title header when Tabs are disabled
   editorGroupHeader.tabsBackground: *BG                                         # Background color of the Tabs container
@@ -314,7 +314,7 @@ colors:
   statusBar.foreground: *FG                                                     # Status Bar foreground color
   statusBar.debuggingBackground: *RED                                           # Status Bar background color when a program is being debugged
   statusBar.debuggingForeground: *BGDarker                                      # Status Bar foreground color when a program is being debugged
-  statusBar.noFolderBackground: *BGDarker                                       # Status Bar foreground color when no folder is opened
+  statusBar.noFolderBackground: *BG                                       # Status Bar foreground color when no folder is opened
   statusBar.noFolderForeground: *FG                                             # Status Bar background color when no folder is opened
   statusBarItem.activeBackground:                                               # Status Bar item background color when clicking
   statusBarItem.hoverBackground:                                                # Status Bar item background color when hovering
