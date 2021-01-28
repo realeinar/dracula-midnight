@@ -311,11 +311,11 @@ colors:
 
   # Status Bar Colors
   statusBar.background: *BG                                                     # Standard Status Bar background color
-  statusBar.foreground: *FG                                                     # Status Bar foreground color
+  statusBar.foreground: !alpha [*PURPLE, 90]                                                     # Status Bar foreground color
   statusBar.debuggingBackground: *RED                                           # Status Bar background color when a program is being debugged
   statusBar.debuggingForeground: *BGDarker                                      # Status Bar foreground color when a program is being debugged
   statusBar.noFolderBackground: *BG                                       # Status Bar foreground color when no folder is opened
-  statusBar.noFolderForeground: *FG                                             # Status Bar background color when no folder is opened
+  statusBar.noFolderForeground: !alpha [*PURPLE, 90]                                             # Status Bar background color when no folder is opened
   statusBarItem.activeBackground:                                               # Status Bar item background color when clicking
   statusBarItem.hoverBackground:                                                # Status Bar item background color when hovering
   statusBarItem.prominentBackground: *RED                                       # Status Bar prominent items background color. Prominent items stand out from other Status Bar entries to indicate importance
