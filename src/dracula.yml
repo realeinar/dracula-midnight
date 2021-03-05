@@ -181,6 +181,7 @@ colors:
   # Editor Colors
   editor.foreground: *FG
   editor.background: *BG
+  editorActiveLineNumber.foreground: *YELLOW
   editorLineNumber.foreground: *COMMENT
   editorCursor.foreground: *YELLOW
 
@@ -387,6 +388,7 @@ colors:
 
   # Misc
   menu.separatorBackground:                                                     # Color of a separator menu item in menus
+  sash.hoverBorder: *PINK
 
   listFilterWidget.background: *BGLight                                         # Background color of the type filter widget in lists and trees.
   listFilterWidget.outline: *BGLighter                                          # Outline color of the type filter widget in lists and trees.
