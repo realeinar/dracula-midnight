@@ -43,17 +43,29 @@ async function scrapeThemeAvailableKeys() {
 
 (async () => {
     const availableKeys = await scrapeThemeAvailableKeys();
-    const { base } = await generate();
+    const { cleaner, clean } = await generate();
 
-    for (const key of Object.keys(base.colors)) {
+    for (const key of Object.keys(cleaner.colors)) {
         if (!availableKeys.includes(key)) {
-            console.warn(`Unsupported key "${key}", probably deprecated?`);
+            console.warn(`Cleaner: Unsupported key "${key}", probably deprecated?`);
         }
     }
 
     for (const key of availableKeys) {
-        if (!Object.keys(base.colors).includes(key)) {
-            console.warn(`Missing key "${key}" in theme`);
+        if (!Object.keys(cleaner.colors).includes(key)) {
+            console.warn(`Cleaner Missing key "${key}" in theme`);
+        }
+    }
+
+    for (const key of Object.keys(clean.colors)) {
+        if (!availableKeys.includes(key)) {
+            console.warn(`Clean: Unsupported key "${key}", probably deprecated?`);
+        }
+    }
+
+    for (const key of availableKeys) {
+        if (!Object.keys(clean.colors).includes(key)) {
+            console.warn(`Clean: Missing key "${key}" in theme`);
         }
     }
 })().catch(console.error);

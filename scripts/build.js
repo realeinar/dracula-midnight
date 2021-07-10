@@ -9,12 +9,16 @@ if (!fs.existsSync(THEME_DIR)) {
 }
 
 module.exports = async () => {
-    const { base } = await generate();
+    const { cleaner, clean } = await generate();
 
     return Promise.all([
         fs.promises.writeFile(
-            path.join(THEME_DIR, 'dracula.json'),
-            JSON.stringify(base, null, 4)
+            path.join(THEME_DIR, 'dracula-cleaner.json'),
+            JSON.stringify(cleaner, null, 4)
+        ),
+        fs.promises.writeFile(
+            path.join(THEME_DIR, 'dracula-clean.json'),
+            JSON.stringify(clean, null, 4)
         )
     ]);
 };

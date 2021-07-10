@@ -31,22 +31,35 @@ const withAlphaType = new Type('!alpha', {
 const schema = Schema.create([withAlphaType]);
 
 module.exports = async () => {
-    const yamlFile = await readFile(
-        join(__dirname, '..', 'src', 'dracula.yml'),
+    const yamlFileDraculaCleaner = await readFile(
+        join(__dirname, '..', 'src', 'dracula-cleaner.yml'),
+        'utf-8'
+    );
+
+    const yamlFileDraculaClean = await readFile(
+        join(__dirname, '..', 'src', 'dracula-clean.yml'),
         'utf-8'
     );
 
     /** @type {Theme} */
-    const base = load(yamlFile, { schema });
+    const cleaner = load(yamlFileDraculaCleaner, { schema });
+    const clean = load(yamlFileDraculaClean, { schema });
 
     // Remove nulls and other falsey values from colors
-    for (const key of Object.keys(base.colors)) {
-        if (!base.colors[key]) {
-            delete base.colors[key];
+    for (const key of Object.keys(cleaner.colors)) {
+        if (!cleaner.colors[key]) {
+            delete cleaner.colors[key];
+        }
+    }
+
+    for (const key of Object.keys(clean.colors)) {
+        if (!clean.colors[key]) {
+            delete clean.colors[key];
         }
     }
 
     return {
-        base
+        cleaner,
+        clean
     };
 };

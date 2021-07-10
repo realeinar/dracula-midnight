@@ -82,16 +82,29 @@ colors:
   focusBorder: *TRANSPARENT # Overall border color for focused elements. This color is only used if not overridden by a component
   foreground: *COMMENT # Overall foreground color. This color is only used if not overridden by a component
   widget.shadow: *SHADOW # Shadow color of widgets such as Find/Replace inside the editor
-  selection.background: *PURPLE # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
+  selection.background: !alpha [*PURPLE, 80] # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
   errorForeground: *RED # Overall foreground color for error messages (this color is only used if not overridden by a component)
+  icon.foreground: *COMMENT
+
+  # Action
+  toolbar.hoverBackground: *BGLight # Toolbar background when hovering over actions using the mouse
+  toolbar.hoverOutline: # Toolbar outline when hovering over actions using the mouse
+  toolbar.activeBackground: # Toolbar background when holding the mouse over actions
 
   # Button Control
   button.background: *SELECTION # Button background color
   button.foreground: *FG # Button foreground color
+  button.border:
   button.hoverBackground: # Button background color when hovering
+  button.secondaryForeground: *FG
+  button.secondaryBackground: *RED
+  button.secondaryHoverBackground: *COLOR9
+  checkbox.background: *BGLight
+  checkbox.foreground: *FG
+  checkbox.border: *BGDarker
 
   # Dropdown Control
-  dropdown.background: *BG # Dropdown background
+  dropdown.background: *BGLight # Dropdown background
   dropdown.border: # Dropdown border
   dropdown.foreground: *FG # Dropdown foreground
 
@@ -113,9 +126,9 @@ colors:
 
   # Scroll Bar Control
   scrollbar.shadow: *TRANSPARENT # Scroll Bar shadow to indicate that the view is scrolled
-  scrollbarSlider.activeBackground: !alpha [*PURPLE, 60] # Slider background color when active
-  scrollbarSlider.background: !alpha [*PURPLE, 30] # Slider background color
-  scrollbarSlider.hoverBackground: !alpha [*PURPLE, 40] # Slider background color when hovering
+  scrollbarSlider.activeBackground: !alpha [*PURPLE, 80] # Slider background color when active
+  scrollbarSlider.background: !alpha [*PURPLE, 60] # Slider background color
+  scrollbarSlider.hoverBackground: !alpha [*PURPLE, 70] # Slider background color when hovering
 
   # Badge
   badge.foreground: *FG # Badge foreground color
@@ -126,10 +139,10 @@ colors:
 
   # List & Trees
   list.hoverForeground: *WHITE # List/Tree foreground when hovering over items using the mouse
-  list.hoverBackground: *TRANSPARENT # List/Tree background when hovering over items using the mouse
-  list.activeSelectionBackground: *TRANSPARENT # List/Tree background color for the selected item when the list/tree is active
+  list.hoverBackground: *BGLight # List/Tree background when hovering over items using the mouse
+  list.activeSelectionBackground: *BGLight # List/Tree background color for the selected item when the list/tree is active
   list.activeSelectionForeground: *CYAN # List/Tree foreground color for the selected item when the list/tree is active
-  list.inactiveSelectionBackground: *TRANSPARENT # List/Tree background color for the selected item when the list/tree is inactive
+  list.inactiveSelectionBackground: *BGLight # List/Tree background color for the selected item when the list/tree is inactive
   list.inactiveSelectionForeground: *CYAN # List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not
   list.focusForeground: *WHITE # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
   list.focusBackground: *SELECTION # List/Tree background color for the focused item when the list/tree is active
@@ -138,6 +151,8 @@ colors:
   list.dropBackground: *SELECTION # List/Tree drag and drop background when moving items around using the mouse
   list.warningForeground: *ORANGE # Color of warning decorations in the explorer
   list.errorForeground: *RED # Color of error decorations in the explorer
+  tree.indentGuidesStroke: *BGLighter # Tree Widget's stroke color for indent guides.
+  tree.tableColumnsBorder: *BGDarker # Tree stroke color for the indentation guides.
 
   # Activity Bar
   activityBar.background: *BG # Activity Bar background color
@@ -162,7 +177,7 @@ colors:
   # Editor Group & Tabs
   editorGroup.background: # Background color of an editor group. The background color shows up when dragging editor groups around
   editorGroup.border: *TRANSPARENT # Color to separate multiple editor groups from each other
-  editorGroup.dropBackground: # Background color when dragging editors around
+  editorGroup.dropBackground: *BGLight # Background color when dragging editors around
   editorGroupHeader.noTabsBackground: # Background color of the editor group title header when Tabs are disabled
   editorGroupHeader.tabsBackground: *BG # Background color of the Tabs container
   editorGroupHeader.tabsBorder: # Border color of the editor group title header when tabs are enabled. Editor groups are the containers of editors
@@ -176,13 +191,14 @@ colors:
   tab.inactiveForeground: *COMMENT # Inactive Tab foreground color in an active group
   tab.unfocusedActiveForeground: # Active tab foreground color in an inactive editor group
   tab.unfocusedInactiveForeground: # Inactive tab foreground color in an inactive editor group
+  tab.activeModifiedBorder: *YELLOW
 
   # Editor Colors
   editor.foreground: *FG
   editor.background: *BG
-  editorLineNumber.activeForeground: *YELLOW
+  editorLineNumber.activeForeground: *WHITE
   editorLineNumber.foreground: *COMMENT
-  editorCursor.foreground: *YELLOW
+  editorCursor.foreground: *CYAN
 
   editor.selectionBackground: *SELECTION # Color of the editor selection
   editor.selectionHighlightBackground: *BGLighter # Color for regions with the same content as the selection
@@ -220,7 +236,7 @@ colors:
   # person to person. Thus, setting these is probably better suited
   # for workbench.colorCustomizations in User Settings
   editorBracketMatch.background: # Background color behind matching brackets
-  editorBracketMatch.border: # Color for matching brackets boxes
+  editorBracketMatch.border: *COLOR9 # Color for matching brackets boxes
 
   editorOverviewRuler.border: *TRANSPARENT # Color of the overview ruler border
   editorOverviewRuler.findMatchForeground:
@@ -235,15 +251,18 @@ colors:
   editorOverviewRuler.warningForeground: !alpha [*ORANGE, 80]
   editorOverviewRuler.infoForeground: !alpha [*CYAN, 80]
 
+  editorLightBulb.foreground: *YELLOW # The color used for the lightbulb actions icon.
+  editorLightBulbAutoFix.foreground: *CYAN # The color used for the lightbulb auto fix actions icon.
+
   editorError.foreground: *RED # Foreground color of error squigglies in the editor
   editorError.border: # Border color of error squigglies in the editor
   editorWarning.foreground: *CYAN # Foreground color of warning squigglies in the editor
   editorWarning.border: # Border color of warning squigglies in the editor
 
   editorGutter.background: # Background color of the editor gutter
-  editorGutter.modifiedBackground: !alpha [*CYAN, 80] # Editor gutter background color for lines that are modified
-  editorGutter.addedBackground: !alpha [*GREEN, 80] # Editor gutter background color for lines that are added
-  editorGutter.deletedBackground: !alpha [*RED, 80] # Editor gutter background color for lines that are deleted
+  editorGutter.modifiedBackground: *CYAN # Editor gutter background color for lines that are modified
+  editorGutter.addedBackground: *GREEN # Editor gutter background color for lines that are added
+  editorGutter.deletedBackground: *RED # Editor gutter background color for lines that are deleted
 
   # Explorer Colors
   gitDecoration.modifiedResourceForeground: *CYAN
@@ -257,10 +276,11 @@ colors:
   diffEditor.insertedTextBorder: # Outline color for inserted text
   diffEditor.removedTextBackground: !alpha [*RED, 50] # Background color for removed text
   diffEditor.removedTextBorder: # Outline color for removed text
+  diffEditor.diagonalFill: *BGLighter
 
   # Editor Widget Colors
   editorWidget.background: *BG # Background color of editor widgets, such as Find/Replace
-  editorWidgetBorder: # Border color of the editor widget unless the widget does not contain a border or defines its own border color
+  editorWidget.border: *PURPLE # Border color of the editor widget unless the widget does not contain a border or defines its own border color
 
   editorSuggestWidget.background: *BGDark # Background color of the suggestion widget
   editorSuggestWidget.border: # Border color of the suggestion widget
@@ -305,7 +325,7 @@ colors:
   # Panel Colors
   panel.background: *BG # Panel background color
   panel.border: *TRANSPARENT # Panel border color on the top separating to the editor
-  panelTitle.activeBorder: # Border color for the active panel title
+  panelTitle.activeBorder: *PURPLE # Border color for the active panel title
   panelTitle.activeForeground: *FG # Title color for the active panel
   panelTitle.inactiveForeground: *COMMENT # Title color for the inactive panel
 
@@ -316,10 +336,11 @@ colors:
   statusBar.debuggingForeground: *BGDarker # Status Bar foreground color when a program is being debugged
   statusBar.noFolderBackground: *BG # Status Bar foreground color when no folder is opened
   statusBar.noFolderForeground: !alpha [*PURPLE, 90] # Status Bar background color when no folder is opened
-  statusBarItem.activeBackground: # Status Bar item background color when clicking
-  statusBarItem.hoverBackground: # Status Bar item background color when hovering
+  statusBarItem.activeBackground: *BGLighter # Status Bar item background color when clicking
+  statusBarItem.hoverBackground: *BGLight # Status Bar item background color when hovering
+  statusBarItem.prominentForeground: *FG # Status Bar prominent items foreground color.
   statusBarItem.prominentBackground: *RED # Status Bar prominent items background color. Prominent items stand out from other Status Bar entries to indicate importance
-  statusBarItem.prominentHoverBackground: *ORANGE # Status Bar prominent items background color when hovering. Prominent items stand out from other Status Bar entries to indicate importance
+  statusBarItem.prominentHoverBackground: *COLOR9 # Status Bar prominent items background color when hovering. Prominent items stand out from other Status Bar entries to indicate importance
   statusBarItem.remoteForeground: *FG # Background color for the remote indicator on the status bar
   statusBarItem.remoteBackground: *PURPLE # Foreground color for the remote indicator on the status bar
   statusBar.border:
@@ -331,17 +352,22 @@ colors:
   titleBar.inactiveForeground: *COMMENT # Title Bar foreground when the window is inactive
 
   # Notification Dialog Colors
-  notification.background: *BGDark # Notifications background color
-  notification.foreground: *FG # Notifications foreground color
-  notification.buttonBackground: *SELECTION
-  notification.buttonForeground: *FG
-  notification.buttonHoverBackground: *LineHighlight
-  notification.errorBackground: *RED
-  notification.errorForeground: *FG
-  notification.infoBackground: *CYAN
-  notification.infoForeground: *BG
-  notification.warningBackground: *ORANGE
-  notification.warningForeground: *BG
+  notificationCenter.border:
+  notificationCenterHeader.foreground: *FG
+  notificationCenterHeader.background: *BGLight
+  notificationToast.border:
+  notifications.foreground: *FG
+  notifications.background: *BGLight
+  notifications.border:
+  notificationLink.foreground: *CYAN
+  notificationsErrorIcon.foreground: *RED
+  notificationsWarningIcon.foreground: *ORANGE
+  notificationsInfoIcon.foreground: *CYAN
+
+  # Banner
+  banner.background: *BG
+  banner.foreground: *FG
+  banner.iconForeground: *RED
 
   # Extensions
   extensionButton.prominentForeground: *FG # Extension view button foreground color (for example Install button)
@@ -362,7 +388,6 @@ colors:
 
   # Setting Editor
   settings.headerForeground: *FG # The foreground color for a section header or active title
-  settings.modifiedItemForeground: *ORANGE # The foreground color for a the modified setting indicator
   settings.modifiedItemIndicator: *ORANGE # The color of the line that indicates a modified setting
   settings.inactiveSelectedItemBorder: # The color of the selected setting row border, when the settings list does not have focus
   settings.dropdownBackground: *BGDark # Dropdown background
@@ -384,6 +409,16 @@ colors:
   breadcrumb.focusForeground: *FG # Color of focused breadcrumb items
   breadcrumb.activeSelectionForeground: *FG # Color of selected breadcrumb items
   breadcrumbPicker.background: *BGDarker # Background color of breadcrumb item picker
+
+  # Chart
+  charts.foreground: *FG # Contrast color for text in charts.
+  charts.lines: *FG # Color for lines in charts.
+  charts.red: *RED # Color for red elements in charts.
+  charts.blue: *CYAN # Color for blue elements in charts.
+  charts.yellow: *YELLOW # Color for yellow elements in charts.
+  charts.orange: *ORANGE # Color for orange elements in charts.
+  charts.green: *GREEN # Color for green elements in charts.
+  charts.purple: *PURPLE # Color for purple elements in charts.
 
   # Misc
   menu.separatorBackground: # Color of a separator menu item in menus
