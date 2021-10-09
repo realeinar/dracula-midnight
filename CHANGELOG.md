@@ -5,7 +5,7 @@
 ### Minor
 
 - add support for bracket pair highlighting
-- [python]: Only apply function highlighting for functions that are actually defined. (#186)
+- [python]: Only apply function highlighting for functions that are actually defined
 
 ## 4.0.0
 
