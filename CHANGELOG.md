@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.0
+
+### Major
+
+-   Major refactor to the code
+
 ## 3.0.2
 
 ### Minor

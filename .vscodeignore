@@ -1,12 +1,6 @@
-.github/**
 .vscode/**
-bin/**
-node_modules/**
-scripts/**
-src/**
-tests/**
-.editorconfig
-.prettierrc.toml
-generate.js
-jsconfig.json
-known_issues.md
+.vscode-test/**
+.gitignore
+/node_modules/
+/package-lock.json
+/src/
