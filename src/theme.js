@@ -27,14 +27,6 @@ function getTheme({ theme, name }) {
       "selection.background": chroma(color.purple).alpha(0.5).hex(),
       "sash.hoverBorder"    : color.pink,
 
-      // "textLink.foreground"      : color.DELETE_ME,
-      // "textLink.activeForeground": color.DELETE_ME,
-      // "textBlockQuote.background": color.DELETE_ME,
-      // "textBlockQuote.border"    : color.DELETE_ME,
-      // "textCodeBlock.background" : color.DELETE_ME,
-      // "textPreformat.foreground" : color.DELETE_ME,
-      // "textSeparator.foreground" : color.DELETE_ME,
-
       "button.background": color.selection,
       "button.foreground": color.foreground,
 
@@ -131,7 +123,7 @@ function getTheme({ theme, name }) {
       "statusBarItem.prominentForeground"     : color.foreground,
       "statusBarItem.prominentBackground"     : color.red,
       "statusBarItem.prominentHoverBackground": color.ansi9,
-      "statusBarItem.remoteForeground"        : color.foreground,
+      "statusBarItem.remoteForeground"        : color.background,
       "statusBarItem.remoteBackground"        : color.purple,
 
       "editorGroup.border"              : themes({ clean: color.backgroundDarker, cleaner: color.transparent }),
@@ -225,6 +217,14 @@ function getTheme({ theme, name }) {
       "editorOverviewRuler.infoForeground"               : chroma(color.cyan).alpha(0.8).hex(),
       "editorOverviewRuler.currentContentForeground"     : color.green,
       "editorOverviewRuler.incomingContentForeground"    : color.purple,
+
+      "editorBracketHighlight.foreground1": color.foreground,
+      "editorBracketHighlight.foreground2": color.pink,
+      "editorBracketHighlight.foreground3": color.cyan,
+      "editorBracketHighlight.foreground4": color.green,
+      "editorBracketHighlight.foreground5": color.purple,
+      "editorBracketHighlight.foreground6": color.orange,
+      "editorBracketHighlight.unexpectedBracket.foreground": color.red,
 
       "panel.background"             : themes({ clean: color.backgroundDark, cleaner: color.background}),
       "panel.border"                 : themes({ clean: color.backgroundDarker, cleaner: color.transparent }),
@@ -712,7 +712,6 @@ function getTheme({ theme, name }) {
         name: "Function names",
         scope: [
           "entity.name.function",
-          "meta.function-call.generic",
           "meta.function-call.object",
           "meta.function-call.php",
           "meta.function-call.static",

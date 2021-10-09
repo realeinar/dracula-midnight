@@ -11,10 +11,10 @@
 
 If you are a git user, you can install the theme and keep up to date by cloning the repo:
 
-    $ git clone https://github.com/echevarriandre/dracula-clean.git ~/.vscode/extensions/dracula-clean
-    $ cd ~/.vscode/extensions/dracula-clean
-    $ npm install
-    $ npm run build
+    git clone https://github.com/echevarriandre/dracula-clean.git ~/.vscode/extensions/dracula-clean
+    cd ~/.vscode/extensions/dracula-clean
+    npm install
+    npm run build
 
 #### Activating theme
 
