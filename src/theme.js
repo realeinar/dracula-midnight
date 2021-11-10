@@ -60,10 +60,11 @@ function getTheme({ theme, name }) {
       "progressBar.background": color.pink,
 
       "titleBar.activeForeground"  : color.foreground,
-      "titleBar.activeBackground"  : color.background,
+      "titleBar.activeBackground"  : themes({ clean: color.backgroundDark, cleaner: color.background }),
       "titleBar.inactiveForeground": color.comment,
       "titleBar.inactiveBackground": themes({ clean: color.backgroundDark, cleaner: color.background }),
-
+      "titleBar.border"            : themes({ clean: color.backgroundDarker, cleaner: color.transparent }),
+      
       "activityBar.foreground"        : color.foreground,
       "activityBar.inactiveForeground": color.comment,
       "activityBar.background"        : themes({ clean: color.backgroundDark, cleaner: color.background }),
