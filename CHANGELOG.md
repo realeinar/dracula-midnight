@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.2
+
+### Minor
+
+- fix titleBar color on the Clean theme (macOS)
+
 ## 4.0.1
 
 ### Minor
