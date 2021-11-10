@@ -56,6 +56,6 @@
   "scripts": {
     "start": "nodemon --watch src src/index.js",
     "build": "node src/index.js",
-    "package": "vsce package -o ./build/dracula-clean.vsix"
+    "package": "vsce package -o ./themes/dracula-clean.vsix"
   }
 }
