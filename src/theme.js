@@ -134,7 +134,7 @@ function getTheme({ theme, name }) {
 
       "tab.activeForeground"     : color.foreground,
       "tab.inactiveForeground"   : color.comment,
-      "tab.inactiveBackground"   : themes({ clean: color.backgroundDarker, cleaner: color.background }),
+      "tab.inactiveBackground"   : themes({ clean: color.backgroundDark, cleaner: color.background }),
       "tab.activeBackground"     : color.background,
       "tab.border"               : themes({ clean: color.backgroundDarker, cleaner: color.transparent }),
       "tab.activeBorder"         : themes({ clean: color.background, cleaner: color.pink }),
