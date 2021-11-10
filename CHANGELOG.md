@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.3
+
+### Minor
+
+- change inactive tab background to match title bar and editor tab
+
 ## 4.0.2
 
 ### Minor
