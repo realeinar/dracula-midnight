@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.4
+
+### Minor
+
+- fix extension button and peekview highlight
+
 ## 4.0.3
 
 ### Minor
