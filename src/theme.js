@@ -266,8 +266,8 @@ function getTheme({ theme, name }) {
       "debugToolBar.background": color.backgroundDark,
 
       "peekView.border"                        : themes({ clean: color.backgroundDarker, cleaner: color.transparent }),
-      "peekViewEditor.matchHighlightBackground": chroma(color.yellow).alpha(0.8).hex(),
-      "peekViewResult.matchHighlightBackground": chroma(color.yellow).alpha(0.8).hex(),
+      "peekViewEditor.matchHighlightBackground": chroma(color.pink).alpha(0.4).hex(),
+      "peekViewResult.matchHighlightBackground": chroma(color.pink).alpha(0.4).hex(),
       "peekViewEditor.background"              : color.backgroundDark,
       "peekViewResult.background"              : color.backgroundDark,
       "peekViewResult.fileForeground"          : color.foreground,
@@ -307,8 +307,8 @@ function getTheme({ theme, name }) {
       "banner.iconForeground": color.red,
 
       "extensionButton.prominentForeground"     : color.foreground,
-      "extensionButton.prominentBackground"     : chroma(color.green).alpha(0.9).hex(),
-      "extensionButton.prominentHoverBackground": chroma(color.green).alpha(0.6).hex(),
+      "extensionButton.prominentBackground"     : chroma(color.purple).alpha(0.8).hex(),
+      "extensionButton.prominentHoverBackground": color.purple,
 
       "toolbar.hoverBackground": color.backgroundLight,
 
