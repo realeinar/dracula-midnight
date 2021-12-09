@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.5
+
+### Minor
+
+- add background to matching brackets
+
 ## 4.0.4
 
 ### Minor
