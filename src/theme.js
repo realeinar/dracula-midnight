@@ -181,7 +181,8 @@ function getTheme({ theme, name }) {
       "editor.snippetTabstopHighlightBorder"         : color.comment,
       "editor.snippetFinalTabstopHighlightBackground": color.background,
       "editor.snippetFinalTabstopHighlightBorder"    : color.green,
-      "editorBracketMatch.border"                    : color.ansi9,
+      "editorBracketMatch.border"                    : color.transparent,
+      "editorBracketMatch.background"                : color.selection,
 
       "editorSuggestWidget.background"        : color.backgroundDark,
       "editorSuggestWidget.border"            : themes({ clean: color.backgroundDarker, cleaner: color.transparent }),
