@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.6
+
+### Minor
+
+- fix diffEditor unreadable text
+
 ## 4.0.5
 
 ### Minor
