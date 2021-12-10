@@ -198,8 +198,8 @@ function getTheme({ theme, name }) {
 
       "editorRuler.foreground": color.nonText,
 
-      "diffEditor.insertedTextBackground": chroma(color.green).alpha(0.2).hex(),
-      "diffEditor.removedTextBackground" : chroma(color.red).alpha(0.5).hex(),
+      "diffEditor.insertedTextBackground": chroma(color.green).alpha(0.125).hex(),
+      "diffEditor.removedTextBackground" : chroma(color.red).alpha(0.3).hex(),
       "diffEditor.diagonalFill"          : color.backgroundLighter,
 
       "scrollbar.shadow"                : color.transparent,
