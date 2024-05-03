@@ -1,12 +1,8 @@
-# Dracula Clean for [Visual Studio Code](http://code.visualstudio.com)
+# Dracula Midnight for [Visual Studio Code](http://code.visualstudio.com)
 
-> Better Dracula version for [Visual Studio Code](http://code.visualstudio.com). No more contrast (or just a little 😉)!
+> Better, Darker, Cleaner and Minimistic version of Dracula Theme [Visual Studio Code](http://code.visualstudio.com)!
 
-![Screenshot](https://raw.githubusercontent.com/echevarriandre/dracula-clean/master/screenshot.png)
-
-
-## Source code
-[Git Repo](https://github.com/echevarriandre/dracula-vscode/)
+![Screenshot](https://raw.githubusercontent.com/realeinar/dracula-midnight/master/screenshot.png)
 
 ## License
 

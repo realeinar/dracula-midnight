@@ -1,18 +1,18 @@
 {
-  "name": "theme-dracula-clean",
-  "displayName": "Dracula Clean",
-  "description": "Dracula theme with better contrast or none at all!",
-  "version": "4.0.6",
+  "name": "theme-dracula-midnight",
+  "displayName": "Dracula Midnight",
+  "description": "Dracula theme with Darker and Cleaner!",
+  "version": "1.0.0",
   "preview": true,
-  "publisher": "echevarriandre",
+  "publisher": "realeinar",
   "license": "MIT",
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/echevarriandre/dracula-clean.git"
+    "url": "https://github.com/realeinar/dracula-midnight.git"
   },
   "bugs": {
-    "url": "https://github.com/echevarriandre/dracula-clean/issues"
+    "url": "https://github.com/realeinar/dracula-midnight/issues"
   },
   "engines": {
     "vscode": "^1.43.0"
@@ -23,6 +23,7 @@
   "keywords": [
     "dracula",
     "dark",
+    "darker",
     "theme",
     "color-theme",
     "clean",
@@ -32,14 +33,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "Dracula Clean",
+        "label": "Dracula Midnight",
         "uiTheme": "vs-dark",
-        "path": "./themes/dracula-clean.json"
-      },
-      {
-        "label": "Dracula Cleaner",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dracula-cleaner.json"
+        "path": "./themes/dracula-midnight.json"
       }
     ]
   },
@@ -56,6 +52,7 @@
   "scripts": {
     "start": "nodemon --watch src src/index.js",
     "build": "node src/index.js",
-    "package": "vsce package -o ./themes/dracula-clean.vsix"
+    "package": "vsce package -o ./themes/dracula-midnight.vsix",
+    "clean": "rm -rf themes"
   }
 }

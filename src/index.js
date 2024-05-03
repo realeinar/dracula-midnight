@@ -1,21 +1,20 @@
-const fs = require("fs").promises;
-const getTheme = require("./theme");
+const fs = require('fs').promises
+const getTheme = require('./libs/theme')
 
-const cleanTheme = getTheme({
-  theme: "clean",
-  name: "Dracula Clean",
-});
-
-const cleanerTheme = getTheme({
-  theme: "cleaner",
-  name: "Draculer Cleaner",
-});
+const midnightTheme = getTheme({
+  theme: 'midnight',
+  name: 'Dracula Midnight',
+})
 
 // Write themes
 
-fs.mkdir("./themes", { recursive: true })
-  .then(() => Promise.all([
-    fs.writeFile("./themes/dracula-clean.json", JSON.stringify(cleanTheme, null, 2)),
-    fs.writeFile("./themes/dracula-cleaner.json", JSON.stringify(cleanerTheme, null, 2)),
-  ]))
+fs.mkdir('./themes', { recursive: true })
+  .then(() =>
+    Promise.all([
+      fs.writeFile(
+        './themes/dracula-midnight.json',
+        JSON.stringify(midnightTheme, null, 2)
+      ),
+    ])
+  )
   .catch(() => process.exit(1))
